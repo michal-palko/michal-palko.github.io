@@ -15,13 +15,15 @@ if (currentTheme) {
 }
 
 themeToggle.addEventListener('change', () => {
-  refreshFirstTime()
+  
   if (body.classList.contains('light-mode')) {
+    refreshFirstTime()
     // If the current theme is light, switch to dark
     body.classList.replace('light-mode', 'dark-mode');
     updateThemeLabel('dark-mode'); // Update the theme label text and color
     localStorage.setItem('theme', 'dark-mode');
   } else {
+    refreshFirstTime()
     // If the current theme is dark, switch to light
     body.classList.replace('dark-mode', 'light-mode');
     updateThemeLabel('light-mode'); // Update the theme label text and color
@@ -85,5 +87,6 @@ function showPopup(socialMedia) {
   
       // Perform the reload
       window.location.reload();
+      console.log("page reloaded");
     }
   }
