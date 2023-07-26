@@ -19,7 +19,6 @@ themeToggle.addEventListener('change', () => {
     // If the current theme is light, switch to dark
     body.classList.replace('light-mode', 'dark-mode');
     body.style.backgroundColor = '#333'; 
-    body.style.color = '#fc0303';
     footer.style.backgroundColor = '#333'; // Set footer background color for dark mode
     updateThemeLabel('dark-mode'); // Update the theme label text and color
     localStorage.setItem('theme', 'dark-mode');
@@ -49,6 +48,7 @@ function updateThemeLabel(theme) {
     themeLabel.textContent = 'Quickly back!';
     themeLabel.style.color = '#000'; // Set text color for light theme
     footer.style.color = '#000'; // Set text color for light theme in the footer
+    body.style.color = '#000';
     socialIconTwitter.style.color = '#000';
     socialIconLinkedin.style.color = '#000';
     // socialIconPornhub.style.color = '#000';
