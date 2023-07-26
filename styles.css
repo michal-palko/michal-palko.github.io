@@ -1,0 +1,255 @@
+body {
+    background-color:#333;
+    color:#fff
+    }
+    
+    header {
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    align-items:center
+    }
+    
+    h1 {
+    font-size:30px
+    }
+    
+    .theme-switch {
+    position:relative
+    }
+    
+    .switch {
+    position:relative;
+    display:inline-block;
+    width:60px;
+    height:34px
+    }
+    
+    .slider {
+    position:absolute;
+    cursor:pointer;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#ccc;
+    transition:.4s;
+    border-radius:34px
+    }
+    
+    .slider:before {
+    position:absolute;
+    content:"";
+    height:26px;
+    width:26px;
+    left:4px;
+    bottom:4px;
+    background-color:#fff;
+    transition:.4s;
+    border-radius:50%
+    }
+    
+    input[type="checkbox"] {
+    opacity:0;
+    width:0;
+    height:0
+    }
+    
+    input[type="checkbox"]:checked + .slider {
+    background-color:#000407
+    }
+    
+    input[type="checkbox"]:checked + .slider:before {
+    transform:translateX(26px)
+    }
+    
+    body.light-mode {
+    background-color:#fff;
+    color:#333
+    }
+    
+    .social-icons {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    padding:20px 0
+    }
+    
+    .social-icons li {
+    margin:0 10px
+    }
+    
+    body.dark-mode {
+    background-color:#333;
+    color:#fff
+    }
+    
+    body.light-mode {
+    background-color:#fff;
+    color:#333
+    }
+    
+    main {
+    max-width:800px;
+    margin:0 auto;
+    padding:20px
+    }
+    
+    section {
+    margin-bottom:30px
+    }
+    
+    h2 {
+    font-size:24px;
+    margin-bottom:10px
+    }
+    
+    p {
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:10px
+    }
+    
+    ul {
+    list-style:disc;
+    margin-left:20px;
+    margin-bottom:10px
+    }
+    
+    ul.skills-list {
+    background-color:#444;
+    padding:10px;
+    border-radius:5px
+    }
+    
+    ul.skills-list li {
+    display:inline-block;
+    margin-right:10px;
+    background-color:#666;
+    padding:5px 10px;
+    border-radius:3px
+    }
+    
+    .theme-switch {
+    position:relative;
+    display:inline-block;
+    padding-top: 2%;
+    }
+    
+    .switch {
+    margin-right:60px
+    }
+    
+    #theme-label {
+    font-size:16px;
+    color:#fff;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    left:80px
+    }
+    
+    body {
+    font-family:'Roboto',sans-serif;
+    background-color:#333;
+    color:#fff;
+    max-width: 100;
+    }
+    
+    header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    max-width:700px;
+    margin:0 auto
+    }
+    
+    .header-content {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center
+    }
+    
+    .social-icons-top {
+    margin-top:10px
+    }
+    
+    .social-icons-top li {
+    display:inline-block;
+    margin-right:10px
+    }
+    
+    .social-icons-top a {
+    font-size:30px;
+    text-decoration:none
+    }
+    
+    h1 {
+    font-size:36px;
+    margin:0
+    }
+    
+    footer {
+    padding:10px;
+    text-align:center;
+    font-size:14px;
+    background-color:var(--primary-color);
+    color:#fff
+    }
+    
+    footer p {
+    margin:0
+    }
+    
+    @media (max-width: 768px) {
+        body {
+        font-size:16px
+        }
+        
+        header {
+        padding:10px
+        }
+        
+        h1 {
+        font-size:28px
+        }
+    }
+    
+    .social-icons-top li {
+    /* color:#fff; */
+    display:inline-block;
+    margin-right:20px;
+    position:relative
+    }
+    
+    .icon-label {
+    position:absolute;
+    top:-35px;
+    left:50%;
+    transform:translateX(-50%);
+    background-color:#333;
+    color:#fff;
+    padding:5px 10px;
+    border-radius:5px;
+    opacity:0;
+    white-space:nowrap;
+    pointer-events:none;
+    transition:opacity .3s ease-in-out
+    }
+    
+    .social-icons-top li:hover .icon-label {
+    opacity:1
+    }
+
+    .name-section {
+        text-align: center;
+      }
+
+      img.custom-icon {
+        width: 30px; /* Set the width of the SVG icon */
+        height: 30px; /* Set the height of the SVG icon */
+        /* margin-top: 50px; */
+      }
+
