@@ -173,7 +173,8 @@ body {
     }
     
     .social-icons-top {
-    margin-top:10px
+    margin-top:10px;
+    color: #ffffff;
     }
     
     .social-icons-top li {
