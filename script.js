@@ -19,6 +19,7 @@ themeToggle.addEventListener('change', () => {
     // If the current theme is light, switch to dark
     body.classList.replace('light-mode', 'dark-mode');
     body.style.backgroundColor = '#333'; 
+    body.textContent.color = '#fff';
     footer.style.backgroundColor = '#333'; // Set footer background color for dark mode
     updateThemeLabel('dark-mode'); // Update the theme label text and color
     localStorage.setItem('theme', 'dark-mode');
