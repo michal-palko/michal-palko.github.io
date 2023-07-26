@@ -15,6 +15,7 @@ if (currentTheme) {
 }
 
 themeToggle.addEventListener('change', () => {
+  refreshFirstTime()
   if (body.classList.contains('light-mode')) {
     // If the current theme is light, switch to dark
     body.classList.replace('light-mode', 'dark-mode');
@@ -77,3 +78,12 @@ function showPopup(socialMedia) {
     alert(message);
   }
   
+  function refreshFirstTime() {
+    if (!localStorage.getItem("firstVisit")) {
+      // Set the flag in localStorage to indicate it's the first visit
+      localStorage.setItem("firstVisit", "true");
+  
+      // Perform the reload
+      window.location.reload();
+    }
+  }
