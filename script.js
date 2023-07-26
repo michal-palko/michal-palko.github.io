@@ -18,15 +18,11 @@ themeToggle.addEventListener('change', () => {
   if (body.classList.contains('light-mode')) {
     // If the current theme is light, switch to dark
     body.classList.replace('light-mode', 'dark-mode');
-    body.style.backgroundColor = '#333'; 
-    footer.style.backgroundColor = '#333'; // Set footer background color for dark mode
     updateThemeLabel('dark-mode'); // Update the theme label text and color
     localStorage.setItem('theme', 'dark-mode');
   } else {
     // If the current theme is dark, switch to light
     body.classList.replace('dark-mode', 'light-mode');
-    footer.style.backgroundColor = '#fff'; // Set footer background color for light mode
-    body.style.backgroundColor = '#fff';
     updateThemeLabel('light-mode'); // Update the theme label text and color
     localStorage.setItem('theme', 'light-mode');
   }
@@ -37,6 +33,8 @@ function updateThemeLabel(theme) {
     themeLabel.textContent = 'Burn your eyes';
     themeLabel.style.color = '#fff'; // Set text color for dark theme
     footer.style.color = '#fff'; // Set text color for dark theme in the footer
+    footer.style.backgroundColor = '#333'; // Set footer background color for dark mode
+    body.style.backgroundColor = '#333'; 
     body.style.color = '#fff';
     socialIconTwitter.style.color = '#fff';
     socialIconLinkedin.style.color = '#fff';
@@ -49,6 +47,8 @@ function updateThemeLabel(theme) {
     themeLabel.textContent = 'Quickly back!';
     themeLabel.style.color = '#000'; // Set text color for light theme
     footer.style.color = '#000'; // Set text color for light theme in the footer
+    footer.style.backgroundColor = '#fff'; // Set footer background color for light mode
+    body.style.backgroundColor = '#fff';
     body.style.color = '#000';
     socialIconTwitter.style.color = '#000';
     socialIconLinkedin.style.color = '#000';
@@ -77,3 +77,8 @@ function showPopup(socialMedia) {
     alert(message);
   }
   
+
+  // Automatically refresh the page when it loads
+window.onload = function () {
+  location.reload();
+};
