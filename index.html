@@ -24,6 +24,17 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <script>
+    // Check if it's the first visit
+    if (!localStorage.getItem("firstVisit")) {
+      // Set the flag in localStorage to indicate it's the first visit
+      localStorage.setItem("firstVisit", "true");
+  
+      // Perform the reload
+      window.location.reload();
+    }
+  </script>
+
 </head>
 <body>
   <header>
