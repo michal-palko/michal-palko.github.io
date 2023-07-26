@@ -15,6 +15,7 @@ if (currentTheme) {
 }
 
 themeToggle.addEventListener('change', () => {
+  refreshPage()
   if (body.classList.contains('light-mode')) {
     // If the current theme is light, switch to dark
     body.classList.replace('light-mode', 'dark-mode');
@@ -79,6 +80,6 @@ function showPopup(socialMedia) {
   
 
   // Automatically refresh the page when it loads
-window.onload = function () {
-  location.reload();
-};
+  function refreshPage() {
+    location.reload();
+  }
