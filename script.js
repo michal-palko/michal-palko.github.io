@@ -37,6 +37,7 @@ function updateThemeLabel(theme) {
     themeLabel.textContent = 'Burn your eyes';
     themeLabel.style.color = '#fff'; // Set text color for dark theme
     footer.style.color = '#fff'; // Set text color for dark theme in the footer
+    body.style.color = '#fff';
     socialIconTwitter.style.color = '#fff';
     socialIconLinkedin.style.color = '#fff';
     // socialIconPornhub.style.color = '#fff';
