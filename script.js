@@ -16,17 +16,22 @@ if (currentTheme) {
 
 themeToggle.addEventListener('change', () => {
 
-  gtag('event', 'theme_toggle', {
-    event_category: 'theme',
-    event_label: 'Theme Toggled',
-  });
+
   
   if (body.classList.contains('light-mode')) {
+    gtag('event', 'theme_toggle', {
+      event_category: 'theme',
+      event_label: 'light_theme',
+    });
     body.classList.remove('light-mode'); // remove light mode
     body.classList.add('dark-mode'); // add dark mode
     updateThemeLabel('dark-mode');
     localStorage.setItem('theme', 'dark-mode');
   } else {
+    gtag('event', 'theme_toggle', {
+      event_category: 'theme',
+      event_label: 'dark_theme',
+    });
     body.classList.remove('dark-mode'); // remove dark mode
     body.classList.add('light-mode'); // add light mode
     updateThemeLabel('light-mode');
@@ -72,11 +77,20 @@ function showPopup(socialMedia) {
   
     // Check which social media icon was clicked and set the appropriate message
     if (socialMedia === 'Twitter') {
-      message = 'Elon ruined it.';
+      gtag('event', 'social_icon', {
+        event_category: 'icon',
+        event_label: 'twitter',
+      });
     } else if (socialMedia === 'LinkedIn') {
-      message = 'You clicked on the LinkedIn icon!';
+      gtag('event', 'social_icon', {
+        event_category: 'icon',
+        event_label: 'linkedin',
+      });
     } else {
-      message = 'You clicked on an unknown social media icon!';
+      gtag('event', 'social_icon', {
+        event_category: 'icon',
+        event_label: 'pornhub',
+      });
     }
   
     // Display the pop-up message
