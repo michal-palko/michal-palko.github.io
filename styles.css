@@ -15,14 +15,14 @@ body {
     }
     
     .theme-switch {
-    position:relative
+    position: relative
     }
     
     .switch {
-    position:relative;
-    display:inline-block;
-    width:60px;
-    height:34px
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px
     }
     
     .slider {
@@ -56,7 +56,7 @@ body {
     }
     
     input[type="checkbox"]:checked + .slider {
-    background-color:#000407
+    background-color:#000000
     }
     
     input[type="checkbox"]:checked + .slider:before {
@@ -73,9 +73,6 @@ body {
     display:flex;
     justify-content:center;
     padding:20px 0;
-    display: flex;
-    justify-content: flex-start; /* Align items from the left */
-    gap: 10px; /* Add some spacing between social icons */
     }
     
     .social-icons li {
