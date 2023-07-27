@@ -131,3 +131,31 @@ function trackClickEvent(socialMedia) {
     content.style.display = "block"; // Expand the content
     button.textContent = "I don't want to see it anymore"; // Set initial button text
   }
+
+
+    // Remove the isCollapsed item from localStorage if the button is clicked and the content is expanded
+    window.addEventListener("beforeunload", function () {
+      if (content.style.maxHeight !== "0px") {
+        localStorage.removeItem("isCollapsed");
+      }
+    });
+
+    // By default, set the collapsible content to be collapsed
+    content.style.display = "none";
+    button.textContent = "Expand Section";
+
+
+
+  // const button = document.querySelector(".collapsible-button");
+  // const content = document.querySelector(".collapsible-content");
+
+  // button.addEventListener("click", function () {
+  //   if (content.style.display === "block") {
+  //     content.style.display = "none";
+  //     button.textContent = "Expand Section";
+  //   } else {
+  //     content.style.display = "block";
+  //     button.textContent = "Collapse Section";
+  //   }
+  // });
+
