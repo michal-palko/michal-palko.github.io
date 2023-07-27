@@ -254,3 +254,17 @@ body {
         /* margin-top: 50px; */
       }
 
+      .social-icons-top {
+        margin-left: -100px;
+      }
+
+      @media (max-width: 768px) {
+        .social-icons-top {
+          /* Add your positioning styles for mobile devices here */
+          margin-left: -20px; /* Adjust the value as needed */
+        }
+      }
+
+      .name-section {
+        margin-bottom: 70px; /* Adjust the value to increase the space */
+      }
