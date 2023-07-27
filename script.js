@@ -15,6 +15,11 @@ if (currentTheme) {
 }
 
 themeToggle.addEventListener('change', () => {
+
+  gtag('event', 'theme_toggle', {
+    event_category: 'theme',
+    event_label: 'Theme Toggled',
+  });
   
   if (body.classList.contains('light-mode')) {
     body.classList.remove('light-mode'); // remove light mode
