@@ -17,16 +17,14 @@ if (currentTheme) {
 themeToggle.addEventListener('change', () => {
   
   if (body.classList.contains('light-mode')) {
-    refreshFirstTime()
-    // If the current theme is light, switch to dark
-    body.classList.replace('light-mode', 'dark-mode');
-    updateThemeLabel('dark-mode'); // Update the theme label text and color
+    body.classList.remove('light-mode'); // remove light mode
+    body.classList.add('dark-mode'); // add dark mode
+    updateThemeLabel('dark-mode');
     localStorage.setItem('theme', 'dark-mode');
   } else {
-    refreshFirstTime()
-    // If the current theme is dark, switch to light
-    body.classList.replace('dark-mode', 'light-mode');
-    updateThemeLabel('light-mode'); // Update the theme label text and color
+    body.classList.remove('dark-mode'); // remove dark mode
+    body.classList.add('light-mode'); // add light mode
+    updateThemeLabel('light-mode');
     localStorage.setItem('theme', 'light-mode');
   }
 });
