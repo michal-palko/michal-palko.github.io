@@ -72,7 +72,7 @@ function updateThemeLabel(theme) {
 }
 
 
-function showPopup(socialMedia) {
+function trackClickEvent(socialMedia) {
     let message = '';
   
     // Check which social media icon was clicked and set the appropriate message
