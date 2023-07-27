@@ -268,3 +268,52 @@ body {
       .name-section {
         margin-bottom: 70px; /* Adjust the value to increase the space */
       }
+
+
+      .keyword-tag {
+        display: inline-block;
+        padding: 2px 8px; /* Adjust the padding to make it slimmer */
+        background-color: #f2f2f2b9;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 10px; /* Adjust the border radius to make it slimmer */
+        margin-right: 1px;
+        margin-bottom: 5px;
+        font-size: 12px; /* Adjust the font size to make it slimmer */
+      }
+
+      .keyword-tag-personal {
+        display: inline-block;
+        padding: 2px 8px; /* Adjust the padding to make it slimmer */
+        background-color: #f5ff9cd5;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 10px; /* Adjust the border radius to make it slimmer */
+        margin-right: 1px;
+        margin-bottom: 5px;
+        font-size: 12px; /* Adjust the font size to make it slimmer */
+      }
+
+      .collapsible-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .collapsible-button {
+        background-color: #f2f2f2;
+        color: #333;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px; /* Rounded edges */
+      }
+      
+      .collapsible-content {
+        display: none;
+        padding: 8px;
+        border-radius: 5px; /* Rounded edges */
+        margin-top: 5px;
+      }
+      

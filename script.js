@@ -104,3 +104,30 @@ function trackClickEvent(socialMedia) {
       console.log("page reloaded");
     }
   }
+
+
+  
+  const button = document.querySelector(".collapsible-button");
+  const content = document.querySelector(".collapsible-content");
+
+  button.addEventListener("click", function () {
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      button.textContent = "I don't want to see it anymore"; // Change button text when expanded
+      localStorage.setItem("isCollapsed", "false");
+    } else {
+      content.style.display = "none";
+      button.textContent = "Rabbit hole of references"; // Change button text when collapsed
+      localStorage.setItem("isCollapsed", "true");
+    }
+  });
+
+  // Check the saved state in localStorage on page load
+  const isCollapsed = localStorage.getItem("isCollapsed") === "true";
+  if (isCollapsed) {
+    content.style.display = "none"; // Collapse the content
+    button.textContent = "Rabbit hole of references"; // Set initial button text
+  } else {
+    content.style.display = "block"; // Expand the content
+    button.textContent = "I don't want to see it anymore"; // Set initial button text
+  }
