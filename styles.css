@@ -72,7 +72,10 @@ body {
     list-style:none;
     display:flex;
     justify-content:center;
-    padding:20px 0
+    padding:20px 0;
+    display: flex;
+    justify-content: flex-start; /* Align items from the left */
+    gap: 10px; /* Add some spacing between social icons */
     }
     
     .social-icons li {
@@ -249,8 +252,8 @@ body {
       }
 
       img.custom-icon {
-        width: 30px; /* Set the width of the SVG icon */
-        height: 30px; /* Set the height of the SVG icon */
+        width: 27px; /* Set the width of the SVG icon */
+        height: 27px; /* Set the height of the SVG icon */
         /* margin-top: 50px; */
       }
 
