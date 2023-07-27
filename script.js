@@ -92,9 +92,6 @@ function trackClickEvent(socialMedia) {
         event_label: 'pornhub',
       });
     }
-  
-    // Display the pop-up message
-    alert(message);
   }
   
   function refreshFirstTime() {
