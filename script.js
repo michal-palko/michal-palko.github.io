@@ -142,7 +142,7 @@ function trackClickEvent(socialMedia) {
 
     // By default, set the collapsible content to be collapsed
     content.style.display = "none";
-    button.textContent = "Expand Section";
+    button.textContent = "Rabbit hole of references";
 
 
 
