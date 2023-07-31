@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satoshi&display=swap">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MP resume</title>
@@ -54,9 +55,6 @@
           <span id="theme-label">Burn your eyes</span>
         </label>
       </div>
-
-    <!-- <h1>Michal Palko</h1> -->
-
   </header>
 
   
@@ -69,42 +67,54 @@
                 <h1>Michal Palko</h1>
                 <p>michalpalko7@gmail.com</p>
               </div>
-              <h2>Summary</h2>
-              <p>
-                I am a motivated and enthusiastic individual with a passion for web development. I have experience in HTML, CSS,
-                and JavaScript, and I am eager to learn new technologies to enhance my skills further.
+              <!-- <h2>Summary</h2> -->
+              <p class="bio">
+                Self-thought guy powered and motivated by dopamine doses after several hours automation efforts of manual tasks that 
+                would take otherwise couple of minutes. Focused on BI, data extraction, visualisation and acquiring feelings of power. 
               </p>
             </section>
           
             <section>
               <h2>Education</h2>
-              <p>
-                <strong>Bachelor of Computer Science</strong> - XYZ University, Country (Year of Graduation)
+              <p class="educ-name">
+                <strong>ACCOUNTING (2015.....2018)</strong>
+                <p class="educ-desc">Faculty of Economic Informatics of University of Economics</p>
+              </p>
+              <p class="educ-name">
+                <strong>ECONOMETRICS AND OPERATIONS RESEARCH (2018.....2020)</strong>
+                <p class="educ-desc">Faculty of Economic Informatics of University of Economics</p>
               </p>
             </section>
           
             <section>
               <h2>Experience</h2>
               <p>
-                <strong>Web Developer Intern</strong> - ABC Company, Country (Duration)
+                <strong>Acquisition support (part-time)</strong> - IBM, 2017.....2018
               </p>
               <ul>
-                <li>Assisted in the development and maintenance of company websites</li>
-                <li>Collaborated with the team to implement new features and improvements</li>
-                <li>Learned various front-end technologies and best practices</li>
+                <li>assistance of processes setup in newly created department</li>
+                <li>loading of financial records of German subsidiaries into IBM's ledger</li>
+                <li>automation of these loads [not in scope of the position] (this is where I fall in love with programming and automation)</li>
               </ul>
-            </section>
-          
-            <section>
-              <h2>Skills</h2>
+              <p>
+                <strong>Technical Analyst (GBS EMEA)</strong> - IBM, 2018.....2020
+              </p>
               <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Responsive Web Design</li>
-                <li>Git</li>
+                <li>trasfer to full-time job after recognition of department automation </li>
+                <li>development of various daily financial reporting and tracking tools</li>
+                <li>inventing, developing and implementing offline tool managment</li>
               </ul>
             </section>
+            <p>
+              <strong>WW Consulting Kaizen Business Analyst</strong> - IBM, 2020.....present
+            </p>
+            <ul>
+              <li>continuing from previous position to worldwide, more impactful projects</li>
+              <li>deployment of more tracking and analytics based solutions</li>
+              <li>transfering to more product and process design oriented </li>
+            </ul>
+          </section>
+          
           </main>
 
           <div class="collapsible-section">
@@ -114,41 +124,46 @@
 
               <!-- Your content goes here -->
               <p>
+                <ul>
                 <h4>ZBGIS EXTRACTION</h4>
                   <span class="keyword-tag-personal">personal</span>
                   <span class="keyword-tag">Python</span>
                   <span class="keyword-tag">Regex</span>
-                  <p class="tool-desc"> - small utility that extracts data from zbgis (slovak cadastral portal) about parcels, performs data cleaning, categorization and analysis.  </p>
+                  <li class="tool-desc">small utility that extracts data from zbgis (slovak cadastral portal) about parcels, performs data cleaning, categorization and analysis.  </li>
                 <h4>HOME SERVER</h4>
                   <span class="keyword-tag-personal">personal</span>
                   <span class="keyword-tag">Linux</span>
                   <span class="keyword-tag">Docker</span>
                   <span class="keyword-tag">Python</span>
-                  <p class="tool-desc"> - home assistant setup for smart home automation, coding small integration to support thermostat</p>
-                  <p class="tool-desc"> - setup of automated media library with NAS</p>
+                  <li class="tool-desc">home assistant setup for smart home automation, coding small integration to support thermostat</li>
+                  <li class="tool-desc">setup of automated media library with NAS</li>
                 <h4>DATABASE OF ALL SLOVAK COMPANIES FINANCIAL STATEMENTS</h4>
                   <span class="keyword-tag-personal">personal</span>
                   <span class="keyword-tag">postgreSQL</span>
                   <span class="keyword-tag">Python</span>
                   <span class="keyword-tag">NoSQL</span>
                   <span class="keyword-tag">RestAPI</span>
-                  <p class="tool-desc"> - building postgres database to store over 10 million financial statement from reguz storage along with information about companies, freelancers and other entities</p>
-                  <p class="tool-desc"> - json data automated extraction using restAPI with Python with scheduling and an alert system</p>
-                  <p class="tool-desc"> - transforming data and storing in postres DB</p>
-                  <p class="tool-desc"> - building analysis queries with noSQL techniques in combination with regular SQL</p>
+                  <li class="tool-desc">building postgres database to store over 10 million financial statement from reguz storage along with information about companies, freelancers and other entities</li>
+                  <li class="tool-desc">json data automated extraction using restAPI with Python with scheduling and an alert system</li>
+                  <li class="tool-desc">transforming data and storing in postres DB</li>
+                  <li class="tool-desc">building analysis queries with noSQL techniques in combination with regular SQL</li>
                 <h4>THIS RESUME PAGE</h4>
                   <span class="keyword-tag-personal">personal</span>
                   <span class="keyword-tag">JavaScript</span>
                   <span class="keyword-tag">HTML</span>
                   <span class="keyword-tag">CSS</span>
-                  <p class="tool-desc"> - even thou web development is not my primary field, I built this simple website using basic   </p>
-              </p>
+                  <li class="tool-desc">even thou web development is not my primary field, I built this simple website using basic   </li>
 
-              <span class="keyword-tag-personal">other:</span>
-              <span class="keyword-tag">PrusaSlicer</span>
-              <span class="keyword-tag">CuraSlicer</span>
-              <span class="keyword-tag">Onshape</span>
-              <span class="keyword-tag">SQLlite, DB2, Cloudant</span>
+                  <span class="keyword-tag-personal">other:</span>
+                  <span class="keyword-tag">PrusaSlicer</span>
+                  <span class="keyword-tag">CuraSlicer</span>
+                  <span class="keyword-tag">Onshape</span>
+                  <span class="keyword-tag">SQLlite, DB2, Cloudant</span>
+                  <span class="keyword-tag">Git</span>
+
+
+                  </ul>
+              </p>
             </div>
           </div>
 
@@ -157,7 +172,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="footer">
     <div>
         <p>&copy; 2023 Me. All rights reversed.</p>
         <p>All content is 100% gluten-free and non-GMO.</p>

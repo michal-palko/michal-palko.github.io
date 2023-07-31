@@ -1,7 +1,7 @@
 body {
-    background-color:#333;
-    color:#fff
-    }
+  background-color: #333;
+  font-family: "Satoshi", Helvetica, Arial, sans-serif;;
+  font-weight: 400;}
     
     header {
     display:flex;
@@ -16,6 +16,11 @@ body {
 
     h4 {
       margin-bottom: 5px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      line-height: 20px;
     }
     
     .theme-switch {
@@ -154,7 +159,7 @@ body {
     }
     
     body {
-    font-family:'Roboto',sans-serif;
+    /* font-family:'Roboto',sans-serif; */
     background-color:#333;
     color:#fff;
     max-width: 100;
@@ -201,7 +206,8 @@ body {
     text-align:center;
     font-size:14px;
     background-color:var(--primary-color);
-    color:#fff
+    color:#fff;
+    margin-top: 30px;
     }
     
     footer p {
@@ -273,6 +279,15 @@ body {
         margin-bottom: 70px; /* Adjust the value to increase the space */
       }
 
+      .educ-name {
+        margin-bottom: 5px;
+
+      }
+
+      .educ-desc {
+        margin-top: 1px;
+      }
+
 
       .keyword-tag {
         display: inline-block;
@@ -302,6 +317,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width:800px;
+        margin:0 auto;
       }
       
       .collapsible-button {
@@ -312,6 +329,7 @@ body {
         cursor: pointer;
         font-size: 16px;
         border-radius: 5px; /* Rounded edges */
+        margin-bottom: 30px;
       }
       
 
@@ -323,7 +341,25 @@ body {
       }
 
       .tool-desc {
-        margin-top: 4px;
+        margin-top: 5px;
+        margin-bottom: 
+        5px;
       }
+
       
-      
+      @media print {
+        .social-icons-top,
+        .theme-switch {
+          display: none;
+        }
+        #footer {
+          display: none;
+        }
+        .bio {
+          margin-top: -40px;
+        }
+        .collapsible-button{
+          display: none;
+        }
+
+      }
