@@ -342,8 +342,8 @@ body {
 
       .tool-desc {
         margin-top: 5px;
-        margin-bottom: 
-        5px;
+        margin-bottom: 5px;
+        padding-left: 5px;
       }
 
       
@@ -356,20 +356,21 @@ body {
           display: none;
         }
         .bio {
-          margin-top: -40px;
+          margin-top: -90px;
         }
         .collapsible-button{
           display: none;
         }
         .name-section {
-          margin-top: -40px;
+          margin-top: -50px;
+          margin-bottom: 40px;
         }
       }
 
 
       .bio {
-        border-left: 3px solid #333; /* Default border color for the quote */
-        background-color: #f9f9f9; /* Default background color for the quote */
+        border-left: 3px solid #969696; /* Default border color for the quote */
+        background-color: #3a3939; /* Default background color for the quote */
         padding: 10px; /* Add some padding to create spacing around the quote */
         font-style: italic; /* Italicize the text */
         margin-top: -30px;

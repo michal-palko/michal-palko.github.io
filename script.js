@@ -23,7 +23,6 @@ themeToggle.addEventListener('change', () => {
       event_category: 'theme',
       event_label: 'light_theme',
     });
-    getInfoAndWriteToCloudant();
     body.classList.remove('light-mode'); // remove light mode
     body.classList.add('dark-mode'); // add dark mode
     updateThemeLabel('dark-mode');
@@ -132,75 +131,3 @@ function trackClickEvent(socialMedia) {
     // By default, set the collapsible content to be collapsed
     content.style.display = "none";
     button.textContent = "Rabbit hole of references";
-
-
-
-  // const button = document.querySelector(".collapsible-button");
-  // const content = document.querySelector(".collapsible-content");
-
-  // button.addEventListener("click", function () {
-  //   if (content.style.display === "block") {
-  //     content.style.display = "none";
-  //     button.textContent = "Expand Section";
-  //   } else {
-  //     content.style.display = "block";
-  //     button.textContent = "Collapse Section";
-  //   }
-  // });
-
-
-
-    // Function to send data to Cloudant
-    function writeToCloudant(data) {
-      const cloudantURL = 'https://18a02f06-b509-413d-a320-dcb7a06c38c9-bluemix.cloudantnosqldb.appdomain.cloud/'; // Replace with your Cloudant URL
-      const username = 'apikey-300051e017cf4be6bfae3dc7a675868e'; // Replace with your Cloudant username
-      const password = '5ae1a88eda0156917c938e7e14fa3150d711016e'; // Replace with your Cloudant password
-      const databaseName = 'resume'; // Replace with your database name
-  
-      // Create the basic auth header
-      const basicAuth = btoa(username + ':' + password);
-  
-      // Construct the request options
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-          'Authorization': 'Basic ' + basicAuth,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      };
-  
-      // Make the API call to Cloudant
-      fetch(`${cloudantURL}/${databaseName}`, requestOptions)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Failed to write data to Cloudant');
-          }
-          return response.json();
-        })
-        .then(responseData => {
-          console.log('Data written successfully:', responseData);
-        })
-        .catch(error => {
-          console.error('Error writing data to Cloudant:', error);
-        });
-    }
-  
-    // Function to get information about user's computer
-    function getInfoAndWriteToCloudant() {
-      // Modify this function to gather information about the user's computer.
-      // For example, you can use libraries like Fingerprintjs or detect.js to get more detailed information.
-      const userComputerInfo = {
-        userAgent: navigator.userAgent,
-        screenResolution: `${screen.width}x${screen.height}`,
-        language: navigator.language,
-        // Add more properties as needed.
-      };
-  
-      // Call the function to write data to Cloudant
-      writeToCloudant(userComputerInfo);
-      console.log('data sent')
-    }
-  
-    // Call the function when the page loads
-    getInfoAndWriteToCloudant();
